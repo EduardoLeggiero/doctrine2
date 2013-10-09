@@ -224,6 +224,10 @@ class XmlDriver extends AbstractFileDriver
                 $mapping['columnName'] = (string)$idElement['column'];
             }
 
+            if (isset($idElement['options'])) {
+                $mapping['options'] = (array)$idElement['options'];
+            }
+
             $metadata->mapField($mapping);
 
             if (isset($idElement->generator)) {
