@@ -180,6 +180,10 @@ class YamlDriver extends AbstractFileDriver
                     $mapping['length'] = $idElement['length'];
                 }
 
+                if (isset($idElement['options'])) {
+                    $mapping['options'] = $idElement['options'];
+                }
+
                 $metadata->mapField($mapping);
 
                 if (isset($idElement['generator'])) {
